@@ -1,0 +1,127 @@
+{
+  "source": "StatsBomb Open Data",
+  "competition": "FIFA World Cup 2022",
+  "matches": 64,
+  "shots": 1430,
+  "goals": 152,
+  "by_technique": [
+    {
+      "name": "Normal",
+      "shots": 1087,
+      "goals": 110,
+      "goal_rate": 0.101,
+      "avg_xg": 0.089
+    },
+    {
+      "name": "Half Volley",
+      "shots": 212,
+      "goals": 22,
+      "goal_rate": 0.104,
+      "avg_xg": 0.11
+    },
+    {
+      "name": "Volley",
+      "shots": 92,
+      "goals": 14,
+      "goal_rate": 0.152,
+      "avg_xg": 0.118
+    },
+    {
+      "name": "Diving Header",
+      "shots": 14,
+      "goals": 1,
+      "goal_rate": 0.071,
+      "avg_xg": 0.197
+    },
+    {
+      "name": "Lob",
+      "shots": 13,
+      "goals": 5,
+      "goal_rate": 0.385,
+      "avg_xg": 0.251
+    },
+    {
+      "name": "Overhead Kick",
+      "shots": 7,
+      "goals": 0,
+      "goal_rate": 0.0,
+      "avg_xg": 0.057
+    },
+    {
+      "name": "Backheel",
+      "shots": 5,
+      "goals": 0,
+      "goal_rate": 0.0,
+      "avg_xg": 0.068
+    }
+  ],
+  "by_body_part": [
+    {
+      "name": "Right Foot",
+      "shots": 732,
+      "goals": 70,
+      "goal_rate": 0.096,
+      "avg_xg": 0.091
+    },
+    {
+      "name": "Left Foot",
+      "shots": 433,
+      "goals": 51,
+      "goal_rate": 0.118,
+      "avg_xg": 0.09
+    },
+    {
+      "name": "Head",
+      "shots": 252,
+      "goals": 28,
+      "goal_rate": 0.111,
+      "avg_xg": 0.106
+    },
+    {
+      "name": "Other",
+      "shots": 13,
+      "goals": 3,
+      "goal_rate": 0.231,
+      "avg_xg": 0.412
+    }
+  ],
+  "by_play_type": [
+    {
+      "name": "Open Play",
+      "shots": 1382,
+      "goals": 150,
+      "goal_rate": 0.109,
+      "avg_xg": 0.098
+    },
+    {
+      "name": "Free Kick",
+      "shots": 46,
+      "goals": 2,
+      "goal_rate": 0.043,
+      "avg_xg": 0.043
+    },
+    {
+      "name": "Corner",
+      "shots": 2,
+      "goals": 0,
+      "goal_rate": 0.0,
+      "avg_xg": 0.0
+    }
+  ],
+  "by_first_time": [
+    {
+      "name": "Controlled",
+      "shots": 962,
+      "goals": 81,
+      "goal_rate": 0.084,
+      "avg_xg": 0.078
+    },
+    {
+      "name": "First time",
+      "shots": 468,
+      "goals": 71,
+      "goal_rate": 0.152,
+      "avg_xg": 0.135
+    }
+  ]
+}

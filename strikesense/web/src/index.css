@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Training-ground look: mown turf, chalk lines, cone orange, card yellow. */
+@theme {
+  --color-turf-950: #072216;
+  --color-turf-900: #0b3020;
+  --color-turf-800: #0e3a25;
+  --color-turf-700: #14512f;
+  --color-chalk: #f2f5ec;
+  --color-cone: #ff6b1a;
+  --color-card: #ffd23f;
+  --color-flag: #ff5a4d;
+  --color-grass: #8fe08a;
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --font-sans: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: var(--color-chalk);
+    background-color: var(--color-turf-900);
+    /* mowing stripes */
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--color-turf-900) 0 110px,
+      var(--color-turf-800) 110px 220px
+    );
+    font-variant-numeric: tabular-nums;
+  }
+  ::selection {
+    background: var(--color-cone);
+    color: var(--color-turf-950);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-card);
+    outline-offset: 2px;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  /* A panel is a painted region: the fill darkens the turf, the top rule is chalk. */
+  .field {
+    background: rgba(4, 24, 14, 0.62);
+    border-top: 2px solid rgba(242, 245, 236, 0.85);
+    border-radius: 4px 4px 14px 14px;
+  }
+  /* The boxed panel is reserved for the two focal areas. */
+  .boxed {
+    background: rgba(4, 24, 14, 0.7);
+    border: 2px solid rgba(242, 245, 236, 0.85);
+    border-radius: 22px 6px 22px 6px;
+  }
+  .chalk-text {
+    color: rgba(242, 245, 236, 0.66);
+  }
+  .rule {
+    border-color: rgba(242, 245, 236, 0.16);
+  }
+}
+
+@keyframes strike-ring {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+.strike-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: strike-ring 900ms ease-out 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strike-ring {
+    animation: none;
+    opacity: 0;
+  }
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
