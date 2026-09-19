@@ -1,0 +1,40 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node / web
+node_modules/
+web/dist/
+web/.vite/
+*.log
+npm-debug.log*
+
+# Vercel CLI link folder
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data (recorded kicks and the trained model rebuild themselves)
+server/data/*.db
+server/data/*.db-journal
+server/data/model.joblib
+# server/data/statsbomb_context.json stays tracked so the dashboard card works out of the box
+
+# Arduino build output
+hardware/**/build/
+*.hex
+*.elf
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
